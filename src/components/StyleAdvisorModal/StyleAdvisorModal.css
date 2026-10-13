@@ -1,0 +1,15 @@
+/* StyleAdvisorModal dedicated styles */
+.quiz-choice-card {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quiz-choice-card:hover {
+  transform: translateY(-2px);
+  border-color: #0284c7;
+}
+
+.quiz-choice-selected {
+  border-color: #0284c7;
+  background-color: #f0f9ff;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.1);
+}

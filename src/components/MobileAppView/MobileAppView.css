@@ -1,0 +1,18 @@
+/* MobileAppView dedicated styles */
+.mobile-app-notch {
+  width: 120px;
+  height: 24px;
+  background-color: #0f172a;
+  border-radius: 0 0 16px 16px;
+  margin: 0 auto;
+}
+
+.mobile-bottom-nav {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+.mobile-story-ring {
+  background: linear-gradient(45deg, #f59e0b, #ec4899, #8b5cf6);
+  padding: 2px;
+  border-radius: 9999px;
+}

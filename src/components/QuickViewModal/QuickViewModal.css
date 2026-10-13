@@ -1,0 +1,22 @@
+/* QuickViewModal dedicated styles */
+.quickview-thumb-strip {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+}
+
+.quickview-thumb-strip::-webkit-scrollbar {
+  width: 4px;
+}
+
+.quickview-thumb-strip::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+.quickview-main-image {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quickview-active-variant-ring {
+  box-shadow: 0 0 0 2px #0284c7;
+}

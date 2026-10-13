@@ -1,0 +1,13 @@
+/* CheckoutModal dedicated styles */
+.checkout-step-indicator {
+  transition: all 0.25s ease-in-out;
+}
+
+.checkout-step-active {
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+}
+
+.checkout-radio-selected {
+  border-color: #0284c7;
+  background-color: #f0f9ff;
+}

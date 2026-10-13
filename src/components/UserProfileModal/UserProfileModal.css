@@ -1,0 +1,13 @@
+/* UserProfileModal dedicated styles */
+.profile-avatar-glow {
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+}
+
+.profile-action-btn {
+  transition: all 0.15s ease-in-out;
+}
+
+.profile-action-btn:hover {
+  background-color: #f8fafc;
+  transform: translateX(2px);
+}

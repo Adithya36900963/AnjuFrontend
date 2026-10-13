@@ -1,0 +1,13 @@
+/* OrdersManagementPage dedicated styles */
+.order-table-row {
+  transition: background-color 0.15s ease-in-out;
+}
+
+.order-badge-pill {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.025em;
+}
+
+.order-status-timeline {
+  position: relative;
+}

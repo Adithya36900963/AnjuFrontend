@@ -1,0 +1,8 @@
+/* Footer dedicated styles */
+.footer-link-hover {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-link-hover:hover {
+  transform: translateX(2px);
+}

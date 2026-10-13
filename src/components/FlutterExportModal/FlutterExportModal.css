@@ -1,0 +1,9 @@
+/* FlutterExportModal dedicated styles */
+.code-preview-scroll {
+  font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  tab-size: 2;
+}
+
+.code-copy-btn:active {
+  transform: scale(0.96);
+}

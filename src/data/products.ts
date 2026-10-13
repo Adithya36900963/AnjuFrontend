@@ -7,13 +7,14 @@ export const DESIGNER_SUNGLASSES_IMAGE = '/src/assets/images/lune_designer_sungl
 export const MINIMAL_WATCH_IMAGE = '/src/assets/images/lune_gold_minimal_watch_1791343841983.jpg';
 
 // High-fidelity fallback / product imagery
-export const SCRUNCHIE_IMAGE = 'https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&w=600&q=80';
-export const GOLD_JEWELLERY_IMAGE = 'https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=600&q=80';
-export const HAT_CAP_IMAGE = 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80';
-export const NECKLACE_IMAGE = 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80';
-export const TECH_CASE_IMAGE = 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=600&q=80';
+export const SCRUNCHIE_IMAGE = 'https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&w=480&q=75';
+export const GOLD_JEWELLERY_IMAGE = 'https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=480&q=75';
+export const HAT_CAP_IMAGE = 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=480&q=75';
+export const NECKLACE_IMAGE = 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=480&q=75';
+export const TECH_CASE_IMAGE = 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=480&q=75';
 
 export const CATEGORIES: Category[] = [
+  { id: 'dresses', name: 'Dresses & Gowns', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80', itemCount: 18 },
   { id: 'sunglasses', name: 'Sunglasses', image: DESIGNER_SUNGLASSES_IMAGE, itemCount: 24 },
   { id: 'bags', name: 'Bags', image: TEAL_HANDBAG_IMAGE, itemCount: 18 },
   { id: 'jewellery', name: 'Jewellery', image: GOLD_JEWELLERY_IMAGE, itemCount: 32 },
@@ -26,6 +27,247 @@ export const CATEGORIES: Category[] = [
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'prod-dress-1',
+    name: 'Aurelia Silk Satin Slip Dress',
+    category: 'dresses',
+    categoryLabel: 'Dresses',
+    price: 129.00,
+    originalPrice: 165.00,
+    badge: 'Best Seller',
+    isBestSeller: true,
+    rating: 5.0,
+    reviewsCount: 142,
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80',
+    secondaryImage: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colorVariants: [
+      {
+        name: 'Champagne Gold',
+        colorHex: '#D4AF37',
+        image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'Emerald Forest',
+        colorHex: '#064E3B',
+        image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1518049362265-d5b2a6467637?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1612423284934-2850a4ea6b0f?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'Noir Velvet',
+        colorHex: '#0F172A',
+        image: 'https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+    ],
+    description: 'Liquid drape bias-cut slip dress tailored from lustrous 19-momme silk charmeuse with adjustable delicate rouleau straps and a subtle cowl neckline.',
+    details: [
+      '100% Grade 6A Pure Mulberry Silk Charmeuse',
+      'True bias cut for effortless feminine draping',
+      'Adjustable delicate spaghetti straps',
+      'French seam finishing with side leg slit',
+      'Dry clean or cold delicate silk hand wash',
+    ],
+  },
+  {
+    id: 'prod-dress-2',
+    name: 'Seraphina Tiered Linen Midi Dress',
+    category: 'dresses',
+    categoryLabel: 'Dresses',
+    price: 89.00,
+    badge: 'New Arrival',
+    rating: 4.9,
+    reviewsCount: 89,
+    image: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80',
+    secondaryImage: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=80',
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    colorVariants: [
+      {
+        name: 'Oat Milk Cream',
+        colorHex: '#F5EBE0',
+        image: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'Sunbaked Terracotta',
+        colorHex: '#9C4221',
+        image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'Olive Botanical',
+        colorHex: '#3F6212',
+        image: 'https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+    ],
+    description: 'Breezy architectural summer midi crafted from washed French flax linen with a smocked bodice, cascading tiered skirt, and concealed pockets.',
+    details: [
+      '100% Certified French Flax Linen',
+      'Stretchy smocked bodice fits comfortably across bust',
+      'Deep hidden side-seam functional pockets',
+      'Breathable, airy weave for warm weather',
+      'Machine washable on gentle cold cycle',
+    ],
+  },
+  {
+    id: 'prod-dress-3',
+    name: 'Elysian Floral Chiffon Wrap Dress',
+    category: 'dresses',
+    categoryLabel: 'Dresses',
+    price: 110.00,
+    originalPrice: 140.00,
+    badge: '-21%',
+    rating: 4.9,
+    reviewsCount: 77,
+    image: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=80',
+    secondaryImage: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80',
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colorVariants: [
+      {
+        name: 'Rose Botanical Print',
+        colorHex: '#F43F5E',
+        image: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'Riviera Azure Bloom',
+        colorHex: '#0284C7',
+        image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'Midnight Floral Dusk',
+        colorHex: '#1E1B4B',
+        image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+    ],
+    description: 'Flattering true wrap silhouette cut from featherweight printed chiffon with flutter sleeves and a romantic ruffled asymmetric hem.',
+    details: [
+      'Ultra-fine georgette chiffon with fully lined interior',
+      'Self-tie wrap belt adjusts for custom waist fit',
+      'Flowing flutter sleeves with bra-friendly cut',
+      'Asymmetric tulip ruffled hemline',
+    ],
+  },
+  {
+    id: 'prod-dress-4',
+    name: 'Gala Pleated Off-Shoulder Gown',
+    category: 'dresses',
+    categoryLabel: 'Dresses',
+    price: 185.00,
+    badge: 'Couture',
+    rating: 5.0,
+    reviewsCount: 65,
+    image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+    secondaryImage: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?auto=format&fit=crop&w=800&q=80',
+    ],
+    sizes: ['XS', 'S', 'M', 'L'],
+    colorVariants: [
+      {
+        name: 'Midnight Obsidian',
+        colorHex: '#0F172A',
+        image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'Royal Sapphire',
+        colorHex: '#1D4ED8',
+        image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+      {
+        name: 'Burgundy Wine',
+        colorHex: '#881337',
+        image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1518049362265-d5b2a6467637?auto=format&fit=crop&w=800&q=80',
+        ],
+      },
+    ],
+    description: 'Sculptural black-tie evening gown featuring micro-accordion accordion pleats, an off-the-shoulder sculpted fold, and dramatic floor-sweeping length.',
+    details: [
+      'Micro-pleated metallic luster satin fabric',
+      'Built-in interior corsetry and boning support',
+      'Invisible center back zipper with hook closure',
+      'Floor length with slight train puddle',
+    ],
+  },
+  {
     id: 'prod-1',
     name: 'Silk Scrunchie Set',
     category: 'hair',
@@ -34,7 +276,46 @@ export const PRODUCTS: Product[] = [
     rating: 5.0,
     reviewsCount: 112,
     image: SCRUNCHIE_IMAGE,
+    secondaryImage: 'https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=600&q=80',
+    images: [
+      SCRUNCHIE_IMAGE,
+      'https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80',
+    ],
     colors: ['#FCA5A5', '#0284C7', '#1E293B'],
+    colorVariants: [
+      {
+        name: 'Blush Rose Silk',
+        colorHex: '#FCA5A5',
+        image: SCRUNCHIE_IMAGE,
+        images: [
+          SCRUNCHIE_IMAGE,
+          'https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=600&q=80',
+          'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+      {
+        name: 'Azure Cyan Silk',
+        colorHex: '#0284C7',
+        image: 'https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=600&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=600&q=80',
+          SCRUNCHIE_IMAGE,
+          'https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+      {
+        name: 'Midnight Navy Silk',
+        colorHex: '#1E293B',
+        image: 'https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=600&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=600&q=80',
+          SCRUNCHIE_IMAGE,
+          'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+    ],
     description: '100% pure mulberry silk scrunchies that glide over hair, preventing creasing, breakage, and frizz throughout the day.',
     details: ['100% Grade 6A Mulberry Silk', 'Pack of 3 coordinating colors', 'Zero damage elastic core', 'Hypoallergenic and gentle on all hair types']
   },
@@ -47,7 +328,46 @@ export const PRODUCTS: Product[] = [
     rating: 5.0,
     reviewsCount: 76,
     image: MINIMAL_WATCH_IMAGE,
+    secondaryImage: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80',
+    images: [
+      MINIMAL_WATCH_IMAGE,
+      'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80',
+    ],
     colors: ['#0369A1', '#0F172A', '#D97706'],
+    colorVariants: [
+      {
+        name: 'Champagne Teal',
+        colorHex: '#0369A1',
+        image: MINIMAL_WATCH_IMAGE,
+        images: [
+          MINIMAL_WATCH_IMAGE,
+          'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80',
+          'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+      {
+        name: 'Black Sunray Mesh',
+        colorHex: '#0F172A',
+        image: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80',
+          MINIMAL_WATCH_IMAGE,
+          'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+      {
+        name: 'Amber Cognac Leather',
+        colorHex: '#D97706',
+        image: 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80',
+          MINIMAL_WATCH_IMAGE,
+          'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+    ],
     description: 'Clean architectural lines meet precision Japanese quartz movement. Features an ultra-slim gold bezel with a rich cyan-teal leather band.',
     details: ['38mm 18k Champagne Gold plated case', 'Scratch-resistant sapphire crystal lens', 'Genuine Italian calf leather band', '3ATM Water resistant']
   },
@@ -62,7 +382,46 @@ export const PRODUCTS: Product[] = [
     rating: 5.0,
     reviewsCount: 94,
     image: TEAL_HANDBAG_IMAGE,
+    secondaryImage: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80',
+    images: [
+      TEAL_HANDBAG_IMAGE,
+      'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80',
+    ],
     colors: ['#0891B2', '#0F172A', '#E2E8F0'],
+    colorVariants: [
+      {
+        name: 'Cerulean Teal Pebble',
+        colorHex: '#0891B2',
+        image: TEAL_HANDBAG_IMAGE,
+        images: [
+          TEAL_HANDBAG_IMAGE,
+          'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80',
+          'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+      {
+        name: 'Obsidian Noir Leather',
+        colorHex: '#0F172A',
+        image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80',
+          TEAL_HANDBAG_IMAGE,
+          'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+      {
+        name: 'Cream Alabaster White',
+        colorHex: '#E2E8F0',
+        image: 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=600&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=600&q=80',
+          TEAL_HANDBAG_IMAGE,
+          'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+    ],
     description: 'Structured silhouette crafted from supple grained vegan leather with gleaming gold hardware and versatile double carrying handles.',
     details: ['Premium scratch-resistant vegan pebble leather', 'Gold-plated custom alloy hardware', 'Detachable adjustable crossbody strap', 'Protective bottom metal studs']
   },
@@ -77,7 +436,46 @@ export const PRODUCTS: Product[] = [
     rating: 5.0,
     reviewsCount: 128,
     image: DESIGNER_SUNGLASSES_IMAGE,
+    secondaryImage: 'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=600&q=80',
+    images: [
+      DESIGNER_SUNGLASSES_IMAGE,
+      'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80',
+    ],
     colors: ['#F8FAFC', '#0F172A', '#78350F'],
+    colorVariants: [
+      {
+        name: 'Ivory Bone Acetate',
+        colorHex: '#F8FAFC',
+        image: DESIGNER_SUNGLASSES_IMAGE,
+        images: [
+          DESIGNER_SUNGLASSES_IMAGE,
+          'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=600&q=80',
+          'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+      {
+        name: 'Jet Onyx Black',
+        colorHex: '#0F172A',
+        image: 'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=600&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=600&q=80',
+          DESIGNER_SUNGLASSES_IMAGE,
+          'https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+      {
+        name: 'Honey Amber Tortoise',
+        colorHex: '#78350F',
+        image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80',
+        images: [
+          'https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80',
+          DESIGNER_SUNGLASSES_IMAGE,
+          'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=600&q=80',
+        ],
+      },
+    ],
     description: 'Iconic oversized ivory frames with polarized UV400 gradient lenses. Effortlessly elevate any casual or formal ensemble.',
     details: ['Handcrafted lightweight Italian acetate frame', '100% UVA/UVB Category 3 Polarized lenses', 'Reinforced 5-barrel German hinges', 'Includes structured velvet hardcase & cleaning cloth']
   },
@@ -134,6 +532,223 @@ export const PRODUCTS: Product[] = [
     colors: ['#0E7490', '#1E293B', '#F1F5F9'],
     description: 'Sleek luxury phone case finished with soft-touch pebble leatherette, tactile aluminum camera ring, and integrated MagSafe magnets.',
     details: ['Built-in strong N52 neodymium magnetic ring', 'Soft micro-suede interior lining', 'Machined aluminum camera bezel protection', 'Drop tested from 6 feet']
+  },
+  {
+    id: 'prod-9',
+    name: 'Vintage Tortoise Cat-Eye',
+    category: 'sunglasses',
+    categoryLabel: 'Sunglasses',
+    price: 34.99,
+    badge: 'Trending',
+    rating: 4.9,
+    reviewsCount: 82,
+    image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=480&q=75',
+    colors: ['#78350F', '#0F172A'],
+    description: 'Chic upswept cat-eye silhouette in rich honey tortoiseshell acetate with dark amber polarized lenses.',
+    details: ['Premium Mazzucchelli cellulose acetate', '100% UV400 polarized clarity', 'Comfort molded nose pads', 'Signature gold core wire']
+  },
+  {
+    id: 'prod-10',
+    name: '18k Gold Aviator Shades',
+    category: 'sunglasses',
+    categoryLabel: 'Sunglasses',
+    price: 44.00,
+    rating: 5.0,
+    reviewsCount: 67,
+    image: 'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=480&q=75',
+    colors: ['#EAB308', '#94A3B8'],
+    description: 'Feather-light wire frame aviators with champagne gold plating and ocean-blue gradient lenses.',
+    details: ['Hypoallergenic stainless steel frame', 'Silicone air-cushion nose pads', 'Scratch-resistant polycarbonate lenses', 'Microfiber pouch included']
+  },
+  {
+    id: 'prod-11',
+    name: 'Azure Mini Crossbody Pouch',
+    category: 'bags',
+    categoryLabel: 'Bags',
+    price: 49.00,
+    rating: 4.8,
+    reviewsCount: 53,
+    image: 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=480&q=75',
+    colors: ['#0284C7', '#F8FAFC'],
+    description: 'Compact crescent bag designed for city strolls, holding phone, cardholder, keys, and lip gloss with effortless chic.',
+    details: ['Water-resistant vegan calfskin', 'Polished magnetic snap closure', 'Interior slip card pocket', 'Adjustable shoulder strap']
+  },
+  {
+    id: 'prod-12',
+    name: 'Structured Trapeze Tote',
+    category: 'bags',
+    categoryLabel: 'Bags',
+    price: 89.50,
+    originalPrice: 115.00,
+    badge: 'New',
+    rating: 5.0,
+    reviewsCount: 41,
+    image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=480&q=75',
+    colors: ['#0891B2', '#1E293B'],
+    description: 'Architectural daily workhorse tote crafted with sharp lines, roomy interior for a 13-inch laptop, and gold hardware.',
+    details: ['Fits up to 13-inch laptops and notebooks', 'Reinforced tubular top handles', 'Removable zipped organizer pouch', 'Protective bottom feet']
+  },
+  {
+    id: 'prod-13',
+    name: 'Baroque Pearl Drop Earrings',
+    category: 'jewellery',
+    categoryLabel: 'Jewellery',
+    price: 28.00,
+    rating: 4.9,
+    reviewsCount: 79,
+    image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=480&q=75',
+    colors: ['#EAB308'],
+    description: 'Natural organic freshwater baroque pearls suspended from 18k gold-dipped huggie clasps.',
+    details: ['Genuine cultured freshwater pearls', '18k Gold over sterling silver huggie hoops', 'Each pearl is organically unique', 'Nickel & lead free']
+  },
+  {
+    id: 'prod-14',
+    name: 'Pavé Baguette Eternity Ring',
+    category: 'jewellery',
+    categoryLabel: 'Jewellery',
+    price: 32.00,
+    rating: 4.8,
+    reviewsCount: 56,
+    image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=480&q=75',
+    colors: ['#EAB308', '#CBD5E1'],
+    description: 'Alternating baguette-cut cubic zirconia stones channel-set in a radiant gold band for subtle everyday sparkle.',
+    details: ['AAA Grade brilliant-cut cubic zirconia', 'Comfort-fit curved interior band', 'Anti-tarnish electroplating', 'Stacks effortlessly with other rings']
+  },
+  {
+    id: 'prod-15',
+    name: 'Roman Numeral Steel Mesh Watch',
+    category: 'watches',
+    categoryLabel: 'Watches',
+    price: 58.00,
+    originalPrice: 75.00,
+    badge: '-22%',
+    rating: 5.0,
+    reviewsCount: 64,
+    image: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=480&q=75',
+    colors: ['#D97706', '#94A3B8'],
+    description: 'Crisp sunray dial featuring classic Roman numerals and an ultra-fine Milanese magnetic mesh strap.',
+    details: ['36mm slim profile case', 'Adjustable self-locking magnetic mesh strap', 'Seiko quartz movement', 'Mineral crystal glass']
+  },
+  {
+    id: 'prod-16',
+    name: 'Champagne Gold Square Petite',
+    category: 'watches',
+    categoryLabel: 'Watches',
+    price: 64.00,
+    rating: 4.9,
+    reviewsCount: 39,
+    image: 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=480&q=75',
+    colors: ['#D97706', '#0369A1'],
+    description: 'Vintage-inspired petite square case with emerald-tone dial and emerald leather strap with gold buckle.',
+    details: ['24mm x 28mm square silhouette', 'Embossed lizard-print genuine leather strap', 'Gold baton indices', 'Water resistant to 30 meters']
+  },
+  {
+    id: 'prod-17',
+    name: 'French Tortoise Acetate Claw Clip',
+    category: 'hair',
+    categoryLabel: 'Hair Accessories',
+    price: 16.50,
+    rating: 4.8,
+    reviewsCount: 114,
+    image: 'https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=480&q=75',
+    colors: ['#78350F', '#0284C7'],
+    description: 'Heavy-duty interlocking teeth crafted from bio-acetate that firmly hold thick or fine hair without snagging.',
+    details: ['Eco-friendly biodegradable cellulose acetate', 'Strong internal stainless steel spring', 'Smooth rounded teeth prevent scalp tension', '4.2 inch length']
+  },
+  {
+    id: 'prod-18',
+    name: 'Padded Mulberry Silk Headband',
+    category: 'hair',
+    categoryLabel: 'Hair Accessories',
+    price: 22.00,
+    badge: 'Popular',
+    rating: 4.9,
+    reviewsCount: 71,
+    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=480&q=75',
+    colors: ['#FCA5A5', '#0284C7', '#1E293B'],
+    description: 'Statement crown padded with soft sponge and wrapped in lustrous 22-momme silk to elevate hair effortlessly.',
+    details: ['100% Grade 6A Mulberry Silk outer', 'Pinch-free flexible inner core with ribbon tips', 'Adds 1 inch crown height', 'Gentle on blowouts & curls']
+  },
+  {
+    id: 'prod-19',
+    name: 'Riviera Woven Straw Sun Visor',
+    category: 'hats',
+    categoryLabel: 'Hats & Caps',
+    price: 38.00,
+    rating: 4.8,
+    reviewsCount: 42,
+    image: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8?auto=format&fit=crop&w=480&q=75',
+    colors: ['#D97706', '#1E293B'],
+    description: 'Rollable natural raffia straw visor trimmed with black grosgrain ribbon and open top for high ponytails.',
+    details: ['100% Natural woven raffia straw', 'Packable roll-up design with elastic tie', 'UPF 50+ sun protection brim', 'Moisture-wicking inner sweatband']
+  },
+  {
+    id: 'prod-20',
+    name: 'Wool Felt Wide-Brim Fedora',
+    category: 'hats',
+    categoryLabel: 'Hats & Caps',
+    price: 52.00,
+    originalPrice: 68.00,
+    badge: '-23%',
+    rating: 5.0,
+    reviewsCount: 36,
+    image: 'https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?auto=format&fit=crop&w=480&q=75',
+    colors: ['#334155', '#78350F'],
+    description: 'Structured wool felt fedora featuring a pinched crown and tonal leather band with subtle gold buckle.',
+    details: ['100% Australian wool felt', '3-inch stiffened brim', 'Adjustable inner velcro sweatband', 'Spot clean only']
+  },
+  {
+    id: 'prod-21',
+    name: 'Triple Layered Herringbone Choker',
+    category: 'necklaces',
+    categoryLabel: 'Necklaces',
+    price: 36.00,
+    rating: 4.9,
+    reviewsCount: 88,
+    image: 'https://images.unsplash.com/photo-1611591475819-21b79f64a4b8?auto=format&fit=crop&w=480&q=75',
+    colors: ['#EAB308'],
+    description: 'Three fluid flat herringbone snake chains bonded into one seamless clasp for an instant stacked look.',
+    details: ['18k Gold plated liquid snake chain', '14", 15", and 16" tiered lengths', '3-inch extender chain', 'Tangle-free single clasp design']
+  },
+  {
+    id: 'prod-22',
+    name: 'Celestial Zodiac Medallion',
+    category: 'necklaces',
+    categoryLabel: 'Necklaces',
+    price: 38.50,
+    badge: 'Gift Idea',
+    rating: 5.0,
+    reviewsCount: 95,
+    image: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=480&q=75',
+    colors: ['#EAB308'],
+    description: 'Double-sided coin pendant engraved with celestial constellation stars and sparkling cubic zirconia.',
+    details: ['20mm embossed coin pendant', '20-inch diamond-cut curb chain', '18k Gold Vermeil', 'Comes in Luné velvet keepsake box']
+  },
+  {
+    id: 'prod-23',
+    name: 'Braided Crossbody Phone Lanyard',
+    category: 'tech',
+    categoryLabel: 'Tech Accessories',
+    price: 18.50,
+    rating: 4.8,
+    reviewsCount: 62,
+    image: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=480&q=75',
+    colors: ['#0284C7', '#334155'],
+    description: 'Heavy-duty braided climbing cord with universal phone tether patch and gold swivel carabiner clips.',
+    details: ['Universal insert fits any phone case', 'Adjustable 60-inch cord length', 'Durable zinc-alloy hardware', 'Hands-free convenience']
+  },
+  {
+    id: 'prod-24',
+    name: 'Pebble Leather AirPods Pro Case',
+    category: 'tech',
+    categoryLabel: 'Tech Accessories',
+    price: 22.00,
+    rating: 4.9,
+    reviewsCount: 54,
+    image: 'https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=480&q=75',
+    colors: ['#0E7490', '#1E293B', '#CBD5E1'],
+    description: 'Precision molded case wrapped in azure pebble leather with gold snap closure and key ring clip.',
+    details: ['Compatible with AirPods Pro 1st & 2nd Gen', 'Cutout for lightning & USB-C charging', 'Visible LED charging light hole', 'Gold carabiner clip']
   }
 ];
 

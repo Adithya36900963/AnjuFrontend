@@ -1,0 +1,13 @@
+/* WeeklyTopSellers dedicated styles */
+.seller-card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.seller-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.08);
+}
+
+.seller-tag-sparkle {
+  background: linear-gradient(135deg, #fef08a 0%, #fde047 100%);
+}

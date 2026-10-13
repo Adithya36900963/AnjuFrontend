@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { ShopProvider, useShop } from './context/ShopContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -11,14 +12,94 @@ import { CartDrawer } from './components/CartDrawer';
 import { WishlistDrawer } from './components/WishlistDrawer';
 import { QuickViewModal } from './components/QuickViewModal';
 import { StyleAdvisorModal } from './components/StyleAdvisorModal';
+import { FlutterExportModal } from './components/FlutterExportModal';
+import { AuthPage } from './components/AuthPage';
+import { UserProfileModal } from './components/UserProfileModal';
+import { ProductsPage } from './components/ProductsPage';
+import { ProductDetailPage } from './components/ProductDetailPage';
 import { MobileAppView } from './components/MobileAppView';
-import { Monitor, Smartphone, Sparkles, Check } from 'lucide-react';
+import { OrdersManagementPage } from './components/OrdersManagementPage';
+import { CheckoutModal } from './components/CheckoutModal';
+import { AddressBookPage } from './components/AddressBookPage';
+import { NotFoundPage } from './components/NotFoundPage';
+import { ScrollToTop } from './components/ScrollToTop';
+import './App.css';
+import {
+  Sparkles,
+  Check,
+  Code2,
+} from 'lucide-react';
 
-const MainLayout: React.FC = () => {
-  const { viewMode, setViewMode, setIsStyleAdvisorOpen, toast } = useShop();
+// Responsive Home Page: adapts between mobile app prototype and luxury storefront
+const HomePage: React.FC = () => {
+  const { isAutoResponsive, isMobileScreen } = useShop();
+
+  if (isAutoResponsive && isMobileScreen) {
+    return <MobileAppView />;
+  }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-800">
+    <>
+      <Header />
+      <main className="flex-1">
+        <Hero />
+        <CategoryGrid />
+        <PromoBanners />
+        <WeeklyTopSellers />
+        <Newsletter />
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+// Products Catalog Layout
+const ProductsLayout: React.FC = () => (
+  <>
+    <Header />
+    <main className="flex-1">
+      <ProductsPage />
+    </main>
+    <Footer />
+  </>
+);
+
+// Dedicated Product Detail Layout
+const ProductDetailLayout: React.FC = () => (
+  <>
+    <Header />
+    <main className="flex-1">
+      <ProductDetailPage />
+    </main>
+    <Footer />
+  </>
+);
+
+// 404 Fallback Layout
+const NotFoundLayout: React.FC = () => (
+  <>
+    <Header />
+    <main className="flex-1">
+      <NotFoundPage />
+    </main>
+    <Footer />
+  </>
+);
+
+const MainLayout: React.FC = () => {
+  const navigate = useNavigate();
+  const {
+    setIsStyleAdvisorOpen,
+    isFlutterModalOpen,
+    setIsFlutterModalOpen,
+    toast,
+  } = useShop();
+
+  return (
+    <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-800 app-container">
+      {/* Scroll to Top on every route transition */}
+      <ScrollToTop />
+
       {/* Toast Notification */}
       {toast && (
         <div className="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs font-semibold px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2.5 animate-in fade-in slide-in-from-bottom-3 duration-200">
@@ -29,64 +110,55 @@ const MainLayout: React.FC = () => {
         </div>
       )}
 
-      {/* Floating Mode Switcher Widget for Prototype Testing */}
-      <div className="fixed bottom-6 left-6 z-40 hidden sm:flex items-center gap-1.5 p-1.5 bg-white/90 backdrop-blur-md rounded-full shadow-xl border border-slate-200/80">
-        <button
-          onClick={() => setViewMode('desktop')}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
-            viewMode === 'desktop'
-              ? 'bg-slate-900 text-white shadow-xs'
-              : 'text-slate-600 hover:text-slate-900'
-          }`}
-          title="Switch to Desktop Website Storefront"
-        >
-          <Monitor className="w-3.5 h-3.5" />
-          <span>Web Store</span>
-        </button>
-        <button
-          onClick={() => setViewMode('mobile_app')}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
-            viewMode === 'mobile_app'
-              ? 'bg-[#0284C7] text-white shadow-xs'
-              : 'text-slate-600 hover:text-slate-900'
-          }`}
-          title="Switch to Mobile App Prototype"
-        >
-          <Smartphone className="w-3.5 h-3.5" />
-          <span>Mobile App</span>
-        </button>
-        <div className="w-px h-4 bg-slate-200 mx-0.5" />
+      {/* Discrete Quick Actions (Style Quiz & Flutter Code) */}
+      <div className="fixed bottom-5 left-5 z-40 hidden sm:flex items-center gap-2 p-1.5 bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-slate-200/80 text-xs">
         <button
           onClick={() => setIsStyleAdvisorOpen(true)}
-          className="flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold text-sky-700 hover:bg-sky-50 transition-colors cursor-pointer"
-          title="Open Style Quiz"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-slate-700 hover:text-sky-600 hover:bg-sky-50 font-medium transition-colors cursor-pointer"
+          title="Open AI Style Quiz"
         >
           <Sparkles className="w-3.5 h-3.5 text-sky-600" />
           <span>Style Match</span>
         </button>
+
+        <div className="w-px h-4 bg-slate-200" />
+
+        <button
+          onClick={() => setIsFlutterModalOpen(true)}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-slate-700 hover:text-sky-600 hover:bg-sky-50 font-medium transition-colors cursor-pointer"
+          title="Export Flutter Mobile App Code"
+        >
+          <Code2 className="w-3.5 h-3.5 text-sky-600" />
+          <span>Flutter Code</span>
+        </button>
       </div>
 
-      {viewMode === 'desktop' ? (
-        <>
-          <Header />
-          <main className="flex-1">
-            <Hero />
-            <CategoryGrid />
-            <PromoBanners />
-            <WeeklyTopSellers />
-            <Newsletter />
-          </main>
-          <Footer />
-        </>
-      ) : (
-        <MobileAppView />
-      )}
+      {/* Route Definitions */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductsLayout />} />
+        <Route path="/products/:id" element={<ProductDetailLayout />} />
+        <Route path="/product/:id" element={<ProductDetailLayout />} />
+        <Route path="/orders" element={<OrdersManagementPage />} />
+        <Route path="/orders/:id" element={<OrdersManagementPage />} />
+        <Route path="/addresses" element={<AddressBookPage />} />
+        <Route path="/mobile" element={<MobileAppView />} />
+        <Route path="/auth" element={<AuthPage onClose={() => navigate('/')} />} />
+        <Route path="/login" element={<AuthPage onClose={() => navigate('/')} />} />
+        <Route path="*" element={<NotFoundLayout />} />
+      </Routes>
 
-      {/* Interactive Drawers & Modals */}
+      {/* Interactive Global Drawers & Modals */}
       <CartDrawer />
       <WishlistDrawer />
       <QuickViewModal />
       <StyleAdvisorModal />
+      <UserProfileModal />
+      <CheckoutModal />
+      <FlutterExportModal
+        isOpen={isFlutterModalOpen}
+        onClose={() => setIsFlutterModalOpen(false)}
+      />
     </div>
   );
 };

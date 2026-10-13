@@ -1,0 +1,19 @@
+/* CartDrawer dedicated styles */
+.cart-drawer-slide {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cart-item-enter {
+  animation: cartItemFade 0.25s ease-out;
+}
+
+@keyframes cartItemFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

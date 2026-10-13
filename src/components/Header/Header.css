@@ -1,0 +1,24 @@
+/* Header dedicated styles */
+.header-sticky-blur {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.header-nav-link {
+  position: relative;
+}
+
+.header-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0284c7;
+  transition: width 0.2s ease-in-out;
+}
+
+.header-nav-link:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,11 @@
+/* Hero dedicated styles */
+.hero-glow-blob {
+  filter: blur(60px);
+  opacity: 0.25;
+  animation: heroFloat 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroFloat {
+  0% { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(15px, 20px) scale(1.05); }
+}
